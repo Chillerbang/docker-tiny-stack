@@ -23,5 +23,7 @@ RUN mkdir -p src/pages
 COPY pages/* /my-astro-project/src/pages/index.astro
 COPY scripts/* /my-astro-project
 
+RUN chmod 740 /my-astro-project/start.sh
+
 # Default command
 ENTRYPOINT ["/my-astro-project/start.sh"]
